@@ -6,7 +6,7 @@ const VideoDetail = (props) => {
         return <div>Loading Video Details...</div>
     }
 
-    console.log(props)
+    console.log(props.selectedVideo)
 
     const videoSrc = `https://www.youtube.com/embed/${props.selectedVideo.id.videoId}`
 
@@ -21,6 +21,9 @@ const VideoDetail = (props) => {
                     frameBorder="0"
                     allowFullScreen>
                 </iframe>
+            </div>
+            <div>
+                <h3>{props.selectedVideo.snippet.title}</h3>
             </div>
         </div>
     )

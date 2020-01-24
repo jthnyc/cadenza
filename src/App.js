@@ -32,7 +32,7 @@ class App extends React.Component {
 
 
   render() {
-    const { selectedVideo } = this.state
+    const { videos, selectedVideo } = this.state
 
     return (
       <div className="App">
@@ -41,7 +41,7 @@ class App extends React.Component {
           <SearchBar onFormSubmit={this.handleSubmit}/>
           {/* <ScoreList /> */}
           <VideoDetail selectedVideo={selectedVideo}/>
-          <VideoList video={selectedVideo}/>
+          <VideoList videos={videos}/>
         </header>
       </div>
     );
