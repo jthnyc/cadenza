@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
-import {VideoList, SearchBar, VideoDetail} from './components'
-
+import {VideoList, SearchBar, VideoDetail, OpenSheet} from './components'
+// import searchYoutube from 'youtube-api-v3-search'
 
 class App extends React.Component {
 
@@ -38,6 +38,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>Stackathon</h1>
+          {/* <OpenSheet /> */}
           <SearchBar onFormSubmit={this.handleSubmit}/>
           {/* <ScoreList /> */}
           <VideoDetail selectedVideo={selectedVideo}/>

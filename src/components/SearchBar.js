@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
     }
 
     async handleSubmit(e) {
-        console.log("SUBMITTED!")
+        console.log("FORM SUBMITTED in SearchBar!")
         e.preventDefault()
         const { searchTerm } = this.state
         const { onFormSubmit } = this.props
@@ -28,9 +28,9 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="searchTerm" onChange={this.handleChange} placeholder="Search"></input>
+            <div className="searchbar-container">
+                <form onSubmit={this.handleSubmit} >
+                    <input type="text" className="searchbar-input" name="searchTerm" onChange={this.handleChange} placeholder="Search"></input>
                     <button type="submit">Enter</button>
                 </form>
             </div>

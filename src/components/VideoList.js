@@ -6,19 +6,17 @@ import React from 'react';
 // let finalURL = `https://www.googleapis.com/youtube/v3/search?key=${APIkey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${result}`
 
 const VideoList = (props) => {
-    console.log("PROPS: ", props.videos)
+    console.log("PROPS in VIDEOLIST: ", props.videos)
     return (
         <div>
             <h3>Search Result:</h3>
-            
                 {props.videos.map((video, id) => {
                     return (
                         <div key={id}>
-                                {console.log("TITLE: ", video.snippet.title)}
-                                {console.log("IMAGE SRC: ", video.snippet.thumbnails.default.url)}
+                                {/* {console.log("TITLE: ", video.snippet.title)}
+                                {console.log("IMAGE SRC: ", video.snippet.thumbnails.default.url)} */}
                                 <img alt="pics" src={video.snippet.thumbnails.default.url} width="120" height="90" />
                                 <p>{video.snippet.title}</p>
-                            
                         </div>
                     )
                 })}
