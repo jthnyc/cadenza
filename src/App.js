@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       videos: [],
       selectedVideo: null,
-      file: "Beethoven_AnDieFerneGeliebte.xml" 
+      file: "test.xml" 
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -40,7 +40,6 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>Stackathon</h1>
-          {/* <OpenSheet /> */}
           <OpenSheetMusicDisplay file={this.state.file}/>
           <SearchBar onFormSubmit={this.handleSubmit}/>
           {/* <ScoreList /> */}
