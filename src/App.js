@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios'
-import {VideoList, SearchBar, VideoDetail, OpenSheet} from './components'
+import {VideoList, SearchBar, VideoDetail, OpenSheetMusicDisplay} from './components'
 // import searchYoutube from 'youtube-api-v3-search'
+// import OpenSheetMusicDisplay from './components/lib/OpenSheetMusicDisplay'
 
 class App extends React.Component {
 
@@ -9,7 +10,8 @@ class App extends React.Component {
     super()
     this.state = {
       videos: [],
-      selectedVideo: null
+      selectedVideo: null,
+      file: "Beethoven_AnDieFerneGeliebte.xml" 
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -39,6 +41,7 @@ class App extends React.Component {
         <header className="App-header">
           <h1>Stackathon</h1>
           {/* <OpenSheet /> */}
+          <OpenSheetMusicDisplay file={this.state.file}/>
           <SearchBar onFormSubmit={this.handleSubmit}/>
           {/* <ScoreList /> */}
           <VideoDetail selectedVideo={selectedVideo}/>
