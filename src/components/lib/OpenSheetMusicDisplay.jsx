@@ -13,11 +13,15 @@ class OpenSheetMusicDisplay extends Component {
         const options = {
             autoResize: this.props.autoResize ? this.props.autoResize : true,
             drawTitle: this.props.drawTitle ? this.props.drawTitle : true,
-            disableCursor: this.props.disableCursor ? this.props.disableCursor : false
+            // resizeHandlerAttached: this.props.resizeHandlerAttached ? this.props.resizeHandlerAttached: true,
         }
         this.osmd = new OSMD(this.divRef.current, options);
         this.osmd.load(this.props.file).then(() => this.osmd.render());
     }
+
+    // setupCursor() {
+    //     this.cursor = new Cursor(this.divRef.current, this.osmd)
+    // }
 
     resize() {
         this.forceUpdate();
@@ -43,7 +47,7 @@ class OpenSheetMusicDisplay extends Component {
 
     render() {
         return (
-            <div className="SheetMusicClass" >
+            <div className="osmd-container" >
                 <div ref={this.divRef} />
             </div>
         );

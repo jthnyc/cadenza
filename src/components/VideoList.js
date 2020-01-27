@@ -7,19 +7,19 @@ import React from 'react';
 
 const VideoList = (props) => {
     console.log("PROPS in VIDEOLIST: ", props.videos)
+
     return (
         <div>
-            <h3>Search Result:</h3>
+            <div className="video-list">
                 {props.videos.map((video, id) => {
                     return (
                         <div key={id}>
-                                {/* {console.log("TITLE: ", video.snippet.title)}
-                                {console.log("IMAGE SRC: ", video.snippet.thumbnails.default.url)} */}
-                                <img alt="pics" src={video.snippet.thumbnails.default.url} width="120" height="90" />
-                                <p>{video.snippet.title}</p>
+                            <img alt="pics" src={video.snippet.thumbnails.default.url} width="120" height="90" />
+                            <p className="video-title">{video.snippet.title}</p>
                         </div>
                     )
                 })}
+            </div>
         </div>
     )
 }

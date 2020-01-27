@@ -15,6 +15,73 @@ code {
 /* SearchBar */
 .searchbar-container {
   display: flex;
-  /* background-color: red; */
+  background-color: #203649;
+  flex-wrap: wrap;
+  height: 90px;
+  align-items: center;
   /* justify-content: space-around; */
+}
+
+.test {
+  display: flex;
+  background-color: orange;
+  width: 100%;
+}
+
+.searchbar-input {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  font-size: 20px;
+  /* background-color: #8B1E43; */
+}
+
+.searchbar-btn {
+  width: 50%;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background-color:  #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  font-size: 20px;
+}
+/* 
+.osmd-container {
+  width: 80%;
+  height: 50%;
+  background-color: blue;;
+} */
+
+/* Youtube Component */
+.youtube-search {
+  display: inline-block;
+  width: 100%;
+  background-color: #203649;
+  color: #CB7251;
+}
+
+.video-list {
+  display: flex;
+  flex-direction: column;
+  background-color: purple;
+  padding: 5px;
+  width: 100%;
+}
+
+.video-title {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-detail {
+  display: flex;
+  width: 60.9%;
+  padding: 5px;
+  border: 5px solid #CB7251;
+  /* background-color: silver; */
+  align-content: space-around;
 }

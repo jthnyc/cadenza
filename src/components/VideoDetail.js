@@ -3,7 +3,7 @@ import React from 'react'
 const VideoDetail = (props) => {
 
     if (!props.selectedVideo) {
-        return <div>Loading Video Details...</div>
+        return <div>Search Result</div>
     }
 
     console.log(props.selectedVideo)
@@ -11,21 +11,29 @@ const VideoDetail = (props) => {
     const videoSrc = `https://www.youtube.com/embed/${props.selectedVideo.id.videoId}`
 
     return (
-        <div>
-            <div>
-                <iframe
-                    title="videoDetail"
-                    width="560"
-                    height="315"
-                    src={videoSrc}
-                    frameBorder="0"
-                    allowFullScreen>
-                </iframe>
-            </div>
-            <div>
-                <h3>{props.selectedVideo.snippet.title}</h3>
-            </div>
+        <div className="video-detail">
+            {props.selectedVideo ? (
+                <div>
+                    <div>
+                        <iframe
+                            title="videoDetail"
+                            width="800"
+                            height="500"
+                            src={videoSrc}
+                            frameBorder="0"
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+                    <div>
+                        <h3>{props.selectedVideo.snippet.title}</h3>
+                    </div>
+                </div>
+            ) : (
+                    <div>Loading Video Details...</div>
+                )}
         </div>
+
+
     )
 }
 
