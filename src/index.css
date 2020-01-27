@@ -16,45 +16,44 @@ code {
 .searchbar-container {
   display: flex;
   background-color: #203649;
-  flex-wrap: wrap;
   height: 90px;
   align-items: center;
-  /* justify-content: space-around; */
 }
 
 .test {
   display: flex;
+  box-sizing: border-box;
   background-color: orange;
   width: 100%;
 }
 
 .searchbar-input {
   width: 100%;
-  border: 3px solid #00B4CC;
+  /* border: 3px solid #00B4CC; */
+  border: 3px solid #CB7251;
   border-right: none;
   padding: 5px;
   height: 20px;
   border-radius: 5px 0 0 5px;
   font-size: 20px;
-  /* background-color: #8B1E43; */
 }
 
 .searchbar-btn {
   width: 50%;
   height: 36px;
-  border: 1px solid #00B4CC;
-  background-color:  #00B4CC;
+  border: 1px solid #CB7251;
+  background-color:  #CB7251;
   text-align: center;
-  color: #fff;
+  color: #F3F0F8;
   border-radius: 0 5px 5px 0;
   font-size: 20px;
 }
-/* 
+
 .osmd-container {
-  width: 80%;
+  width: 100%;
   height: 50%;
-  background-color: blue;;
-} */
+  border: 5px solid gold;
+}
 
 /* Youtube Component */
 .youtube-search {
@@ -67,21 +66,73 @@ code {
 .video-list {
   display: flex;
   flex-direction: column;
-  background-color: purple;
+  /* background-color: purple; */
   padding: 5px;
-  width: 100%;
+  width: 97%;
+  /* border: 3px solid gold; */
 }
 
 .video-title {
   display: flex;
   flex-wrap: wrap;
+  width: 50%;
 }
 
-.video-detail {
+.video-container {
   display: flex;
-  width: 60.9%;
+  position: relative;
+  width: 100%;
   padding: 5px;
-  border: 5px solid #CB7251;
-  /* background-color: silver; */
-  align-content: space-around;
+  border: 5px solid #8B1E43;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+.video-view {
+  display:flex;
+  /* border: 5px solid red; */
+  align-content: space-between;
+}
+
+/* .selected-video {
+  display: flex;
+  position: absolute;
+  border: 5px solid skyblue;
+  align-content: stretch;
+} */
+
+.selected-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right:0;
+  /* border: 5px solid skyblue; */
+}
+
+.individual-videos {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  /* border: 5px solid brown; */
+  align-content: center;
+}
+
+.video-player {
+  /* min-height: 480px; */
+  width: 100%;
+  height: 100%
+}
+
+.dropdown-menu {
+  width: 50%;
+  height: 36px;
+  border: 1px solid #CB7251;
+  background-color:  #CB7251;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  font-size: 20px;
+
 }

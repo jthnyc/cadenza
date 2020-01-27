@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios'
 import { VideoList, SearchBar, VideoDetail, OpenSheetMusicDisplay } from './components'
-// import searchYoutube from 'youtube-api-v3-search'
 
 class App extends React.Component {
 
@@ -13,6 +12,7 @@ class App extends React.Component {
       file: "Beethoven_AnDieFerneGeliebte.xml"
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   async handleSubmit(searchTerm) {
@@ -31,6 +31,15 @@ class App extends React.Component {
     })
   }
 
+  handleClick(event) {
+    event.persist();
+    const file = event.target.value;
+    this.setState({
+      file: file
+    })
+    console.log("updated file")
+  }
+
   render() {
     const { videos, selectedVideo } = this.state
 
@@ -40,13 +49,21 @@ class App extends React.Component {
           <h1>Stackathon</h1>
           <div className="youtube-search">
             <SearchBar onFormSubmit={this.handleSubmit} />
-            <div>
+            <div className="video-view">
               <VideoDetail selectedVideo={selectedVideo} />
               <VideoList videos={videos} />
             </div>
           </div>
           {/* <ScoreList /> */}
           <div>
+            <div>
+              <h2>Select score</h2>
+              <select onChange={this.handleClick} className="dropdown-menu">
+                <option value="Beethoven_AnDieFerneGeliebte.xml">Beethoven: An Die Ferne Geliebte</option>
+                <option value="MuzioClementi_SonatinaOpus36No1_Part2.xml">Clementi: Sonatina Op. 36 No. 1</option>
+                <option value="Frere Jacques.xml">Frere Jacques</option>
+              </select>
+            </div>
             <OpenSheetMusicDisplay file={this.state.file} />
           </div>
         </header>
