@@ -9,7 +9,7 @@ class App extends React.Component {
     this.state = {
       videos: [],
       selectedVideo: null,
-      file: "Frere Jacques.xml"
+      file: "MuzioClementi_SonatinaOpus36No1_Part2.xml"
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleClick = this.handleClick.bind(this)
@@ -59,10 +59,9 @@ class App extends React.Component {
             <div className="dropdown-section">
               <h2>Select score</h2>
               <select onChange={this.handleClick} className="dropdown-menu">
-                <option value="Frere Jacques.xml">Frere Jacques</option>
-                <option value="Beethoven_AnDieFerneGeliebte.xml">Beethoven: An Die Ferne Geliebte</option>
                 <option value="MuzioClementi_SonatinaOpus36No1_Part2.xml">Clementi: Sonatina Op. 36 No. 1</option>
-
+                <option value="Beethoven_AnDieFerneGeliebte.xml">Beethoven: An Die Ferne Geliebte</option>
+                <option value="Frere Jacques.xml">Frere Jacques</option>
               </select>
             </div>
             <OpenSheetMusicDisplay file={this.state.file} />

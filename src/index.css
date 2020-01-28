@@ -24,16 +24,14 @@ a {
   align-items: center;
 }
 
-.test {
+.searchbar-component {
   display: flex;
   box-sizing: border-box;
-  background-color: orange;
   width: 100%;
 }
 
 .searchbar-input {
   width: 100%;
-  /* border: 3px solid #00B4CC; */
   border: 3px solid #CB7251;
   border-right: none;
   padding: 5px;
@@ -88,7 +86,7 @@ a {
   position: relative;
   width: 100%;
   padding: 5px;
-  border: 5px solid #8B1E43;
+  border: 5px solid #CB7251;
   border-top: none;
   border-left: none;
   border-bottom: none;
@@ -99,13 +97,6 @@ a {
   /* border: 5px solid red; */
   align-content: space-between;
 }
-
-/* .selected-video {
-  display: flex;
-  position: absolute;
-  border: 5px solid skyblue;
-  align-content: stretch;
-} */
 
 .selected-video {
   position: absolute;
