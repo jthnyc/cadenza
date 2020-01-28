@@ -15,7 +15,9 @@ const VideoList = (props) => {
                     return (
                         <div key={id} className="individual-videos">
                             <img alt="pics" src={video.snippet.thumbnails.default.url} width="150" height="110" />
-                            <p className="video-title">{video.snippet.title}</p>
+                            {/* <a href={`https://www.youtube.com/embed/${video.id.videoId}`}> */}
+                                <p className="video-title">{video.snippet.title}</p>
+                            {/* </a> */}
                         </div>
                     )
                 })}

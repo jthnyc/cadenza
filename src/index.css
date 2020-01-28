@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* SearchBar */
 .searchbar-container {
   display: flex;
@@ -52,7 +56,8 @@ code {
 .osmd-container {
   width: 100%;
   height: 50%;
-  border: 5px solid gold;
+  padding: 5px;
+  border: 5px solid #CB7251;
 }
 
 /* Youtube Component */
@@ -134,5 +139,12 @@ code {
   color: #fff;
   border-radius: 0 5px 5px 0;
   font-size: 20px;
+}
 
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  /* border: 1px solid black; */
+  justify-content: center;
 }
