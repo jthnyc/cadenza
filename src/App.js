@@ -75,6 +75,7 @@ class App extends React.Component {
                 <option value="Frere Jacques.xml">Frere Jacques</option>
               </select>
             </div>
+            {/* <ScoreList /> */}
             <OpenSheetMusicDisplay file={this.state.file} />
           </div>
         </header>
