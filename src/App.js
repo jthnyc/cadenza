@@ -72,7 +72,7 @@ class App extends React.Component {
                 <option value="Beethoven_AnDieFerneGeliebte.xml">
                   Beethoven: An Die Ferne Geliebte
                 </option>
-                <option value="Frere Jacques.xml">Frere Jacques</option>
+                {/* <option value="Frere Jacques.xml">Frere Jacques</option> */}
               </select>
             </div>
             {/* <ScoreList /> */}
