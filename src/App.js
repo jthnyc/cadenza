@@ -1,47 +1,56 @@
-import React from 'react';
-import axios from 'axios'
-import { VideoList, SearchBar, VideoDetail, OpenSheetMusicDisplay } from './components'
+import React from "react";
+import axios from "axios";
+import {
+  VideoList,
+  SearchBar,
+  VideoDetail,
+  OpenSheetMusicDisplay,
+} from "./components";
+
+console.log("PROCESS ENV: ", process.env.REACT_APP_YOUTUBE_API_KEY);
 
 class App extends React.Component {
-
   constructor() {
-    super()
+    super();
     this.state = {
       videos: [],
       selectedVideo: null,
-      file: "MuzioClementi_SonatinaOpus36No1_Part2.xml"
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleClick = this.handleClick.bind(this)
+      file: "MuzioClementi_SonatinaOpus36No1_Part2.xml",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   async handleSubmit(searchTerm) {
-    const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-      params: {
-        part: 'snippet',
-        type: 'video',
-        maxResults: 5,
-        key: "AIzaSyCmAE5-qP5OCuD156muHHW_7w99NTNEJc0",
-        q: searchTerm
+    const response = await axios.get(
+      "https://www.googleapis.com/youtube/v3/search",
+      {
+        params: {
+          part: "snippet",
+          type: "video",
+          maxResults: 5,
+          key: process.env.REACT_APP_YOUTUBE_API_KEY,
+          q: searchTerm,
+        },
       }
-    })
+    );
     this.setState({
       videos: response.data.items,
-      selectedVideo: response.data.items[0]
-    })
+      selectedVideo: response.data.items[0],
+    });
   }
 
   handleClick(event) {
     event.persist();
     const file = event.target.value;
     this.setState({
-      file: file
-    })
-    console.log("updated file")
+      file: file,
+    });
+    console.log("updated file");
   }
 
   render() {
-    const { videos, selectedVideo } = this.state
+    const { videos, selectedVideo } = this.state;
 
     return (
       <div className="App">
@@ -59,8 +68,12 @@ class App extends React.Component {
             <div className="dropdown-section">
               <h2>Select score</h2>
               <select onChange={this.handleClick} className="dropdown-menu">
-                <option value="MuzioClementi_SonatinaOpus36No1_Part2.xml">Clementi: Sonatina Op. 36 No. 1</option>
-                <option value="Beethoven_AnDieFerneGeliebte.xml">Beethoven: An Die Ferne Geliebte</option>
+                <option value="MuzioClementi_SonatinaOpus36No1_Part2.xml">
+                  Clementi: Sonatina Op. 36 No. 1
+                </option>
+                <option value="Beethoven_AnDieFerneGeliebte.xml">
+                  Beethoven: An Die Ferne Geliebte
+                </option>
                 <option value="Frere Jacques.xml">Frere Jacques</option>
               </select>
             </div>
