@@ -7,8 +7,6 @@ import {
   OpenSheetMusicDisplay,
 } from "./components";
 
-console.log("PROCESS ENV: ", process.env.REACT_APP_YOUTUBE_API_KEY);
-
 class App extends React.Component {
   constructor() {
     super();
