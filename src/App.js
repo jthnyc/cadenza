@@ -51,9 +51,11 @@ class App extends React.Component {
     const { videos, selectedVideo } = this.state;
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Stackathon</h1>
+      <div>
+        <nav>
+          <h1>Cadenza</h1>
+        </nav>
+        <div>
           <div className="youtube-search">
             <SearchBar onFormSubmit={this.handleSubmit} />
             <div className="video-view">
@@ -77,8 +79,17 @@ class App extends React.Component {
             </div>
             {/* <ScoreList /> */}
             <OpenSheetMusicDisplay file={this.state.file} />
+            <iframe
+              src="https://flat.io/embed/58e4fafd4bc8aa3c5840dfb9?appId=5ed003fb8a438e1461b9bfd7&sharingKey=da09e27ea7ed2ace6f73b2c2dae9f87c923e93bf60d5728c6a8b02507cb08f2a8d7fb7c0ba8075fe1667d95ce38e2a585af004e509bebebf368b4f82e845ac59"
+              height="450"
+              width="100%"
+              frameBorder="0"
+              allowfullscreen
+              allow="midi"
+              title="flat"
+            ></iframe>
           </div>
-        </header>
+        </div>
       </div>
     );
   }

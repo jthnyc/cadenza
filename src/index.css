@@ -1,19 +1,25 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 a {
   text-decoration: none;
+}
+
+nav {
+  display: flex;
+  /* border: 10px solid black; */
+  padding: 1em;
 }
 
 /* SearchBar */
@@ -32,7 +38,7 @@ a {
 
 .searchbar-input {
   width: 100%;
-  border: 3px solid #CB7251;
+  border: 3px solid #cb7251;
   border-right: none;
   padding: 5px;
   height: 20px;
@@ -43,10 +49,10 @@ a {
 .searchbar-btn {
   width: 50%;
   height: 36px;
-  border: 1px solid #CB7251;
-  background-color:  #CB7251;
+  border: 1px solid #cb7251;
+  background-color: #cb7251;
   text-align: center;
-  color: #F3F0F8;
+  color: #f3f0f8;
   border-radius: 0 5px 5px 0;
   font-size: 20px;
 }
@@ -55,7 +61,7 @@ a {
   width: 100%;
   height: 50%;
   padding: 5px;
-  border: 5px solid #CB7251;
+  border: 5px solid #cb7251;
 }
 
 /* Youtube Component */
@@ -63,7 +69,7 @@ a {
   display: inline-block;
   width: 100%;
   background-color: #203649;
-  color: #CB7251;
+  color: #cb7251;
 }
 
 .video-list {
@@ -86,14 +92,14 @@ a {
   position: relative;
   width: 100%;
   padding: 5px;
-  border: 5px solid #CB7251;
+  border: 5px solid #cb7251;
   border-top: none;
   border-left: none;
   border-bottom: none;
 }
 
 .video-view {
-  display:flex;
+  display: flex;
   /* border: 5px solid red; */
   align-content: space-between;
 }
@@ -103,7 +109,7 @@ a {
   top: 0;
   left: 0;
   bottom: 0;
-  right:0;
+  right: 0;
   /* border: 5px solid skyblue; */
 }
 
@@ -118,14 +124,14 @@ a {
 .video-player {
   /* min-height: 480px; */
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .dropdown-menu {
   width: 50%;
   height: 36px;
-  border: 1px solid #CB7251;
-  background-color:  #CB7251;
+  border: 1px solid #cb7251;
+  background-color: #cb7251;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
