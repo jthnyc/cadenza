@@ -22,9 +22,9 @@ class OpenSheetMusicDisplay extends Component {
   //     this.cursor = new Cursor(this.divRef.current, this.osmd);
   //   }
 
-  resize() {
-    this.forceUpdate();
-  }
+  // resize() {
+  //   this.forceUpdate();
+  // }
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.resize);
