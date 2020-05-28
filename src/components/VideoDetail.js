@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoDetail = (props) => {
   if (!props.selectedVideo) {
-    return <div>Search Result</div>;
+    return <div></div>;
   }
 
   console.log(props.selectedVideo);
@@ -24,9 +24,9 @@ const VideoDetail = (props) => {
               allowFullScreen
             ></iframe>
           </div>
-          <div className="selected-video-title">
+          {/* <div className="selected-video-title">
             <h3>{props.selectedVideo.snippet.title}</h3>
-          </div>
+          </div> */}
         </div>
       ) : (
         <div>Loading Video Details...</div>

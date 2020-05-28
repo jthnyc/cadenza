@@ -2,20 +2,25 @@ import React from "react";
 
 const VideoList = (props) => {
   console.log("PROPS in VIDEOLIST: ", props.videos);
+  const videoList = props.videos.slice(1);
 
   return (
     <div className="video-player-list">
       <div className="video-list">
-        {props.videos.map((video, id) => {
+        {videoList.map((video, id) => {
           return (
             <div key={id} className="individual-videos">
               <img
                 alt="pics"
                 src={video.snippet.thumbnails.default.url}
-                width="150"
-                height="110"
+                width="280"
+                height="170"
               />
-              <p className="video-title">{video.snippet.title}</p>
+              <br />
+              <div className="detail-container">
+                <h4 className="video-title">{video.snippet.title}</h4>
+                <p>{video.snippet.channelTitle}</p>
+              </div>
             </div>
           );
         })}

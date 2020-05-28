@@ -26,7 +26,7 @@ class App extends React.Component {
         params: {
           part: "snippet",
           type: "video",
-          maxResults: 5,
+          maxResults: 10,
           key: process.env.REACT_APP_YOUTUBE_API_KEY,
           q: searchTerm,
         },
@@ -66,7 +66,6 @@ class App extends React.Component {
           {/* <ScoreList /> */}
           <div className="score-container">
             <div className="dropdown-section">
-              <h2>Select score</h2>
               <select onChange={this.handleClick} className="dropdown-menu">
                 <option value="MuzioClementi_SonatinaOpus36No1_Part2.xml">
                   Clementi: Sonatina Op. 36 No. 1
