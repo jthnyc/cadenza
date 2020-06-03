@@ -15,12 +15,15 @@ class OpenSheetMusicDisplay extends Component {
       drawTitle: this.props.drawTitle ? this.props.drawTitle : true,
     };
     this.osmd = new OSMD(this.divRef.current, options);
-    this.osmd.load(this.props.file).then(() => this.osmd.render());
+    this.osmd.load(this.props.file).then(() => {
+      this.osmd.render();
+      this.osmd.cursor.show();
+    });
   }
 
-  //   setupCursor() {
-  //     this.cursor = new Cursor(this.divRef.current, this.osmd);
-  //   }
+  // setupCursor() {
+  //   this.cursor = new Cursor(this.divRef.current, this.osmd);
+  // }
 
   // resize() {
   //   this.forceUpdate();

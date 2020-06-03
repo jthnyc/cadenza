@@ -2,7 +2,11 @@ import React from "react";
 
 const VideoList = (props) => {
   console.log("PROPS in VIDEOLIST: ", props.videos);
+  //
+  // needs to update per chosen video instead of just slice(1)
   const videoList = props.videos.slice(1);
+
+  // create handleClick
 
   return (
     <div className="video-player-list">
