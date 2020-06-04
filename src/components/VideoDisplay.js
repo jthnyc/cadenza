@@ -1,17 +1,17 @@
 import React from "react";
 
-const VideoDetail = (props) => {
-  if (!props.selectedVideo) {
+const VideoDisplay = (props) => {
+  if (!props.videoDisplay) {
     return <div></div>;
   }
 
-  console.log(props.selectedVideo);
+  console.log(props.videoDisplay);
 
-  const videoSrc = `https://www.youtube.com/embed/${props.selectedVideo.id.videoId}`;
+  const videoSrc = `https://www.youtube.com/embed/${props.videoDisplay.id.videoId}`;
 
   return (
     <div className="video-container">
-      {props.selectedVideo ? (
+      {props.videoDisplay ? (
         <div>
           <div className="selected-video">
             <iframe
@@ -35,4 +35,4 @@ const VideoDetail = (props) => {
   );
 };
 
-export default VideoDetail;
+export default VideoDisplay;

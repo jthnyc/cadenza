@@ -3,7 +3,7 @@ import axios from "axios";
 import {
   VideoList,
   SearchBar,
-  VideoDetail,
+  VideoDisplay,
   OpenSheetMusicDisplay,
   Cursor,
 } from "./components";
@@ -13,11 +13,12 @@ class App extends React.Component {
     super();
     this.state = {
       videos: [],
-      selectedVideo: null,
+      videoDisplay: null,
       file: "MuzioClementi_SonatinaOpus36No1_Part2.xml",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleScoreSelection = this.handleScoreSelection.bind(this);
+    this.handleVideoSelection = this.handleVideoSelection.bind(this);
   }
 
   async handleSubmit(searchTerm) {
@@ -35,7 +36,7 @@ class App extends React.Component {
     );
     this.setState({
       videos: response.data.items,
-      selectedVideo: response.data.items[0],
+      videoDisplay: response.data.items[0],
     });
   }
 
@@ -48,8 +49,12 @@ class App extends React.Component {
     console.log("updated file");
   }
 
+  handleVideoSelection(event) {
+    console.log("video selected: ", event.target.value);
+  }
+
   render() {
-    const { videos, selectedVideo } = this.state;
+    const { videos, videoDisplay } = this.state;
 
     return (
       <div>
@@ -60,8 +65,12 @@ class App extends React.Component {
           <div className="youtube-search">
             <SearchBar onFormSubmit={this.handleSubmit} />
             <div className="video-view">
-              <VideoDetail selectedVideo={selectedVideo} />
-              <VideoList videos={videos} />
+              <VideoDisplay videoDisplay={videoDisplay} />
+              <VideoList
+                onClick={this.handleVideoSelection}
+                videos={videos}
+                videoDisplay={videoDisplay}
+              />
             </div>
           </div>
           <div className="score-container">

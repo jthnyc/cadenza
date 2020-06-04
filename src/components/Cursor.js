@@ -11,18 +11,22 @@ class Cursor extends React.Component {
 
   handleShow(e) {
     console.log("clicked show: ", e);
+    //cursor.show()
   }
 
   handleHide(e) {
     console.log("clicked hide: ", e);
+    //cursor.hide()
   }
 
   handleNext(e) {
     console.log("clicked next: ", e);
+    //cursor.next()
   }
 
   handleReset(e) {
     console.log("clicked reset: ", e);
+    //cursor.reset()
   }
 
   render() {
