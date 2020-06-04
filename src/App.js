@@ -42,9 +42,9 @@ class App extends React.Component {
 
   handleScoreSelection(event) {
     event.persist();
-    const file = event.target.value;
+    const selectedScore = event.target.value;
     this.setState({
-      file: file,
+      file: selectedScore,
     });
     console.log("updated file");
   }
