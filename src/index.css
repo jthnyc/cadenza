@@ -154,7 +154,7 @@ nav {
 
 /* DROPDOWN MENU */
 .dropdown-menu {
-  width: 80%;
+  width: 50%;
   height: 40px;
   border: 1px solid #cb7251;
   background-color: #cb7251;
@@ -170,4 +170,8 @@ nav {
   padding: 2em;
   /* border: 5px solid black; */
   align-items: center;
+}
+
+.cursor-container {
+  display: inline-block;
 }
