@@ -50,7 +50,7 @@ class App extends React.Component {
   }
 
   handleVideoSelection(event) {
-    console.log("video selected: ", event.target.value);
+    console.log("video selected: ", event.target);
   }
 
   render() {
